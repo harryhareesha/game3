@@ -35,8 +35,12 @@ nav ul {
   padding: 0;
 }
 nav li {
+  padding: 8px 8px;
   display: inline-block;
-  margin-left: 16px;
+  margin-left: 20px;
+  font-weight: 600;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
 }
 nav li.btn {
   padding: 10px 16px;
@@ -52,6 +56,8 @@ nav li.btn:hover {
 }
 
 /* banner */
-.banner img {
-  border-radius: 6px;
+.banner {
+  padding: 8px 0;
+  border: 2px solid brown;
+  border-radius: 8px;
 }

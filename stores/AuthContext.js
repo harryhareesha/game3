@@ -19,11 +19,11 @@ export default function AuthContextProvider({ children }) {
             setUser(null)
             console.log('logout event');
         })
-netlifyIdentity.on('init', (user) => {
-    setAuthReady(true)
-    setUser(user)
-    console.log('initialized');
-})
+        netlifyIdentity.on('init', (user) => {
+            setAuthReady(true)
+            setUser(user)
+            console.log('initialized');
+        })
         // initi netlify identity connection
         netlifyIdentity.init()
 
@@ -31,7 +31,7 @@ netlifyIdentity.on('init', (user) => {
             netlifyIdentity.off('login')
             netlifyIdentity.off('logout')
         }
-        
+
     }, [])
     const login = () => {
         netlifyIdentity.open()
@@ -40,7 +40,7 @@ netlifyIdentity.on('init', (user) => {
         netlifyIdentity.logout()
     }
 
-    const context = {user, login, logout, authReady}
+    const context = { user, login, logout, authReady }
     return (
         <AuthContext.Provider value={context}>
             {children}
