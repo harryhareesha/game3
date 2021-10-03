@@ -18,7 +18,7 @@ export default function Guides() {
         .then(res => {
           if (!res.ok) {
             login()
-            throw Error('You must be logged in to view this content')
+            throw Error('You must be logged in to view the references. Please login / sign up')
           }
           return res.json()
         })
