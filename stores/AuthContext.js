@@ -19,9 +19,14 @@ export default function AuthContextProvider({ children }) {
             setUser(null)
             console.log('logout event');
         })
+netlifyIdentity.on('init', (user) => {
+    setAuthReady(true)
+    setUser(user)
+    console.log('initialized');
+})
         // initi netlify identity connection
         netlifyIdentity.init()
-        
+
         return () => {
             netlifyIdentity.off('login')
             netlifyIdentity.off('logout')
