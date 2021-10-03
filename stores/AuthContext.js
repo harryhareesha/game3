@@ -15,18 +15,24 @@ export default function AuthContextProvider({ children }) {
             netlifyIdentity.close()  // to close the model
             console.log('login event');
         })
-        netlifyIdentity.on('login', (user) => {
-            setUser(user)
+        netlifyIdentity.on('logout', () => {
+            setUser(null)
             console.log('logout event');
         })
         // initi netlify identity connection
         netlifyIdentity.init()
+        
+        return () => {
+            netlifyIdentity.off('login')
+            netlifyIdentity.off('logout')
+        }
+        
     }, [])
     const login = () => {
         netlifyIdentity.open()
     }
     const logout = () => {
-        netlifyIdentity.close()
+        netlifyIdentity.logout()
     }
 
     const context = {user, login, logout, authReady}
