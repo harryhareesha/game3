@@ -5,18 +5,15 @@ exports.handler = async (event, context) => {
     { title: 'Ultimate Street Fighter Guide', author: 'chun-li' },
   ]
 
-  if (context.clientContext.user) {
-    // fetch data & then return
+if (context.clientContext.user){
     return {
-      statusCode: 200,
+      statusCode: 200, 
       body: JSON.stringify(guides)
     }
   }
-
-  // return error status
   return {
     statusCode: 401,
-    body: JSON.stringify({ mssg: 'ah ah ah, you must be logged into see this' })
+    body: JSON.stringify({ msg: 'ah, unauth.  '})
   }
 
 }
