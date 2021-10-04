@@ -13,8 +13,8 @@ export default function Navbar() {
         <h1>What they say...</h1>
         {authReady && (
           <ul>
-            <li><Link href="/"><a>Summary</a></Link></li>
-            <li><Link href="/references"><a><strong>References</strong></a></Link></li>
+            <li><Link href="/">Summary</Link></li>
+            <li><Link href="/references"><strong>References</strong></Link></li>
             {!user && <li onClick={login} className="btn">Login/Signup</li>}
             {user && <li>{user.email}</li>}
             {user && <li onClick={logout} className="btn">Logout</li>}
