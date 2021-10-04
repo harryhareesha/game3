@@ -12,12 +12,7 @@ exports.handler = async (event, context) => {
       snippet: 'In this task, part of the messaging module. When the patient selects an image to upload to the CA / Provider, it is uploaded to the target system. However, target system quitely rejects the larger files, after the fact. So, determine the file size and inform the patient about the error possibility',
       author: 'Android Team'
     },
-    {
-      img: 'caleb-castro-PM-appreciates',
-      title: 'Poineering and steering the epic attachments',
-      snippet: 'In this project, details had to be ironed out, and multi-platform implementation of the epic attachments had to be completed in timely fashion',
-      author: 'Castro Caleb, PM'
-    },
+   
     {
       img: 'Chris-V-Android-inhouse-Lead3',
       title: 'Chris Vanso, android in-house moible team lead appreciates',
