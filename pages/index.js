@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <div className={styles.home}>
-      <h2><a href="linkedin.com/in/harry-hareesha-590a056">My Professional Profile</a></h2>
+      <h2><a href="https://linkedin.com/in/harry-hareesha-590a056">My Professional Profile:</a></h2>
       <div>
         <p>I am a seasoned and experienced developer who collaborates with product managers, PO, business analysts and other developers to in 2-week sprints, building out features, enhancements and bug fixes.</p>
 
